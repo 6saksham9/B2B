@@ -17,8 +17,7 @@ class _LoginScreenState extends State<LoginScreen> {
   FocusNode passwordFocusNode = FocusNode();
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: GestureDetector(
+    return GestureDetector(
       onTap: () {
         phoneNumberFocusNode.unfocus();
         passwordFocusNode.unfocus();
@@ -53,7 +52,7 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
         ),
       ),
-    ));
+    );
   }
 }
 
@@ -63,7 +62,7 @@ Widget loginbutton(BuildContext context) {
       Expanded(
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-            padding:const EdgeInsets.symmetric(vertical: 18.0),
+            padding: const EdgeInsets.symmetric(vertical: 18.0),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(12),
             ),

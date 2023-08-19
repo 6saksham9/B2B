@@ -15,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
 
-    Timer(const Duration(seconds: 4), () {
+    Timer(const Duration(seconds: 2), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
@@ -27,23 +27,21 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.white,
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset('assets/b2b_logo.png'),
-              const SizedBox(
-                height: 100,
-              ),
-              const CircularProgressIndicator(
-                color: Colors.black,
-                strokeWidth: 10.0,
-              ),
-            ],
-          ),
+    return Container(
+      color: Colors.white,
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset('assets/b2b_logo.png'),
+            const SizedBox(
+              height: 100,
+            ),
+            const CircularProgressIndicator(
+              color: Colors.black,
+              strokeWidth: 10.0,
+            ),
+          ],
         ),
       ),
     );
